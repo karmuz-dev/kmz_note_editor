@@ -1,0 +1,274 @@
+/*
+ * Portable presentation for the editor document and collaboration widgets.
+ * This file intentionally contains no host/global reset: applications may keep
+ * their own typography and page theme while Notes retain a consistent surface.
+ */
+.kmz-note-theme {
+    color: #ddd;
+    color-scheme: dark;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.kmz-note-theme .tiptap,
+.kmz-note-theme .ProseMirror {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 8px 12px;
+    color: #ddd;
+    font-size: 13px;
+    line-height: 1.5;
+    outline: none;
+}
+
+.kmz-note-theme .tiptap h1,
+.kmz-note-theme .ProseMirror h1 {
+    margin: 0.6em 0 0.3em;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.2em;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.kmz-note-theme .tiptap h2,
+.kmz-note-theme .ProseMirror h2 {
+    margin: 0.5em 0 0.2em;
+    color: #eee;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.kmz-note-theme .tiptap h3,
+.kmz-note-theme .ProseMirror h3 {
+    margin: 0.4em 0 0.2em;
+    color: #ddd;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.kmz-note-theme .tiptap p,
+.kmz-note-theme .ProseMirror p {
+    margin: 0.4em 0;
+}
+
+.kmz-note-theme .tiptap ul,
+.kmz-note-theme .ProseMirror ul {
+    margin: 0.3em 0;
+    padding-left: 1.5em;
+    list-style: disc;
+}
+
+.kmz-note-theme .tiptap ol,
+.kmz-note-theme .ProseMirror ol {
+    margin: 0.3em 0;
+    padding-left: 1.5em;
+    list-style: decimal;
+}
+
+.kmz-note-theme .tiptap li,
+.kmz-note-theme .ProseMirror li {
+    margin: 0.15em 0;
+}
+
+.kmz-note-theme .tiptap strong,
+.kmz-note-theme .ProseMirror strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.kmz-note-theme .tiptap em,
+.kmz-note-theme .ProseMirror em {
+    font-style: italic;
+}
+
+.kmz-note-theme .tiptap code,
+.kmz-note-theme .ProseMirror code {
+    border-radius: 3px;
+    padding: 1px 4px;
+    background: #333;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9em;
+}
+
+.kmz-note-theme .tiptap pre,
+.kmz-note-theme .ProseMirror pre {
+    margin: 0.4em 0;
+    overflow-x: auto;
+    border-radius: 4px;
+    padding: 8px;
+    background: #1a1a1a;
+}
+
+.kmz-note-theme .tiptap pre code,
+.kmz-note-theme .ProseMirror pre code {
+    padding: 0;
+    background: none;
+}
+
+.kmz-note-theme .tiptap hr,
+.kmz-note-theme .ProseMirror hr {
+    margin: 0.6em 0;
+    border: 0;
+    border-top: 1px solid #555;
+}
+
+.kmz-note-theme .tiptap table,
+.kmz-note-theme .ProseMirror table {
+    width: 100%;
+    margin: 0.5em 0;
+    border-collapse: collapse;
+}
+
+.kmz-note-theme .tiptap th,
+.kmz-note-theme .ProseMirror th {
+    border: 1px solid #555;
+    padding: 4px 8px;
+    background: #2a2a2a;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+}
+
+.kmz-note-theme .tiptap td,
+.kmz-note-theme .ProseMirror td {
+    border: 1px solid #444;
+    padding: 4px 8px;
+}
+
+.kmz-note-theme .tiptap table[data-display="plain"],
+.kmz-note-theme .ProseMirror table[data-display="plain"] {
+    border-collapse: collapse;
+}
+
+.kmz-note-theme .tiptap table[data-display="plain"] thead,
+.kmz-note-theme .ProseMirror table[data-display="plain"] thead,
+.kmz-note-theme table[data-display="plain"] thead {
+    display: none !important;
+}
+
+.kmz-note-theme .tiptap table[data-display="plain"] > tbody > tr:first-child:has(th),
+.kmz-note-theme .ProseMirror table[data-display="plain"] > tbody > tr:first-child:has(th),
+.kmz-note-theme table[data-display="plain"] > tbody > tr:first-child:has(th) {
+    display: none !important;
+}
+
+.kmz-note-theme .tiptap table[data-display="plain"] th,
+.kmz-note-theme .tiptap table[data-display="plain"] td,
+.kmz-note-theme .ProseMirror table[data-display="plain"] th,
+.kmz-note-theme .ProseMirror table[data-display="plain"] td {
+    border: 0;
+    padding: 2px 10px 2px 0;
+    background: transparent;
+}
+
+.kmz-note-theme .tiptap table[data-display="plain"] p,
+.kmz-note-theme .ProseMirror table[data-display="plain"] p {
+    margin: 0;
+}
+
+.kmz-note-theme [data-player-stats-panel] input:not([type="checkbox"]),
+.kmz-note-theme [data-player-stats-panel] select {
+    width: 100%;
+    min-width: 0;
+}
+
+.kmz-note-theme .tiptap blockquote,
+.kmz-note-theme .ProseMirror blockquote {
+    margin: 0.4em 0;
+    border-left: 3px solid #555;
+    padding-left: 10px;
+    color: #aaa;
+}
+
+.kmz-note-theme .tiptap a,
+.kmz-note-theme .ProseMirror a {
+    color: #4488ff;
+    text-decoration: underline;
+}
+
+.kmz-note-theme .tiptap .selectedCell,
+.kmz-note-theme .ProseMirror .selectedCell {
+    background: rgb(68 136 255 / 15%);
+}
+
+.kmz-note-theme .tiptap[contenteditable="false"],
+.kmz-note-theme .ProseMirror[contenteditable="false"] {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.kmz-note-theme .note-remote-selection {
+    border-bottom: 1px solid var(--note-presence-color);
+    background: color-mix(in srgb, var(--note-presence-color) 28%, transparent);
+}
+
+.kmz-note-theme .note-remote-cursor {
+    position: relative;
+    z-index: 5;
+    margin-right: -1px;
+    margin-left: -1px;
+    border-left: 2px solid var(--note-presence-color);
+    pointer-events: none;
+    word-break: normal;
+}
+
+.kmz-note-theme .note-remote-cursor-label {
+    position: absolute;
+    top: -1.5em;
+    left: -2px;
+    max-width: 140px;
+    overflow: hidden;
+    border-radius: 4px 4px 4px 0;
+    padding: 1px 5px;
+    background: var(--note-presence-color);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 35%);
+    white-space: nowrap;
+}
+
+.kmz-note-theme input[type="checkbox"] {
+    pointer-events: auto;
+}
+
+.kmz-note-theme .tiptap ul[data-type="taskList"],
+.kmz-note-theme .ProseMirror ul[data-type="taskList"] {
+    margin: 0.3em 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.kmz-note-theme .tiptap ul[data-type="taskList"] li,
+.kmz-note-theme .ProseMirror ul[data-type="taskList"] li {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.kmz-note-theme .tiptap ul[data-type="taskList"] li > label,
+.kmz-note-theme .ProseMirror ul[data-type="taskList"] li > label {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    line-height: 1;
+}
+
+.kmz-note-theme .tiptap ul[data-type="taskList"] li > div,
+.kmz-note-theme .ProseMirror ul[data-type="taskList"] li > div {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.kmz-note-theme .tiptap ul[data-type="taskList"] li > div > p,
+.kmz-note-theme .ProseMirror ul[data-type="taskList"] li > div > p {
+    margin: 0;
+    line-height: inherit;
+}
+
+.kmz-codex-popup { position: fixed; z-index: 10000; width: min(300px, calc(100vw - 16px)); max-height: 280px; overflow: auto; padding: 12px; border: 1px solid #45566b; border-radius: 8px; background: #152234; color: #eef4fa; box-shadow: 0 8px 24px #0005; font: 14px/1.5 system-ui, sans-serif; }
+.kmz-codex-popup button { display: block; width: 100%; padding: 8px; border: 0; border-radius: 4px; background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.kmz-codex-popup button:hover, .kmz-codex-popup button:focus { background: #304963; outline: 2px solid #81b9ed; }
+.kmz-codex-popup p { margin: 8px 0 0; }
