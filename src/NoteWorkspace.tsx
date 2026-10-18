@@ -120,6 +120,8 @@ export interface NoteWorkspaceProps {
     /** Opens this note initially while keeping the full note workspace. */
     initialNoteId?: string;
     canManagePlayerStats?: boolean;
+    /** Character identities are available only in campaign rooms. */
+    supportsCharacters?: boolean;
     tokenSources?: NoteTokenSource[];
     embedded?: boolean;
     active?: boolean;
@@ -365,6 +367,7 @@ export default function NoteWorkspace({
     noteId,
     initialNoteId,
     canManagePlayerStats = false,
+    supportsCharacters = true,
     tokenSources = [],
     embedded = false,
     active = true,
@@ -1235,6 +1238,10 @@ export default function NoteWorkspace({
     }, [defaultNewNoteStatsOwnerId]);
 
     useEffect(() => {
+        if (!supportsCharacters) {
+            setCharacters([]);
+            return;
+        }
         if (!isOpen || !roomId) return;
         let cancelled = false;
         const loadCharacters = async () => {
@@ -1257,7 +1264,7 @@ export default function NoteWorkspace({
             cancelled = true;
             unsubscribe?.();
         };
-    }, [host, isOpen, roomId]);
+    }, [host, isOpen, roomId, supportsCharacters]);
 
     useEffect(() => {
         setActiveStatsOwnerSelectOpen(false);
